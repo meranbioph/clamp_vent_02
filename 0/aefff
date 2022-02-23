@@ -20,25 +20,73 @@ internalField   uniform 0;
 
 boundaryField
 {
-    inlet
+    inlet_n1
     {
         type            zeroGradient;
     }
-    outlet
+    inlet_n2
     {
         type            zeroGradient;
     }
-    top
+    inlet_n3
     {
-        type            symmetryPlane;
+        type            zeroGradient;
+    }
+    inlet_n4
+    {
+        type            zeroGradient;
+    }
+    inlet_n5
+    {
+        type            zeroGradient;
+    }
+    inlet_n6
+    {
+        type            zeroGradient;
+    }
+    inlet_s1
+    {
+        type            zeroGradient;
+    }
+    inlet_s2
+    {
+        type            zeroGradient;
+    }
+    inlet_s3
+    {
+        type            zeroGradient;
+    }
+    inlet_s4
+    {
+        type            zeroGradient;
+    }
+    inlet_s5
+    {
+        type            zeroGradient;
+    }
+    inlet_s6
+    {
+        type            zeroGradient;
     }
     ground
     {
         type            zeroGradient;
     }
-    frontAndBack
+    south
     {
-        type            empty;
+        type            symmetryPlane;
+    }
+    north
+    {
+        type            symmetryPlane;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    pipe
+    {
+        type            zeroGradient;
     }
 }
 

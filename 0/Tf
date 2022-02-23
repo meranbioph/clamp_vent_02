@@ -18,30 +18,100 @@ dimensions      [0 0 0 1 0 0 0];
 
 internalField   uniform 288;
 
+BTf 280;
+
 boundaryField
 {
     inlet
     {
         type            fixedValue;
-        value           uniform 300;
+        value           uniform 280;
     }
-    outlet
+
+    boundaryField
     {
-        type            zeroGradient;
+        inlet_n1
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_n2
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_n3
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_n4
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_n5
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_n6
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_s1
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_s2
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_s3
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_s4
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_s5
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        inlet_s6
+        {
+          type            fixedValue;
+          value           uniform $BTf;
+        }
+        ground
+        {
+            type            zeroGradient;
+        }
+        south
+        {
+            type            symmetryPlane;
+        }
+        north
+        {
+            type            symmetryPlane;
+        }
+        outlet
+        {
+            type            zeroGradient;
+        }
+        pipe
+        {
+            type            zeroGradient;
+        }
     }
-    top
-    {
-        type            symmetryPlane;
-    }
-    ground
-    {
-        type            zeroGradient;
-    }
-    frontAndBack
-    {
-        type            empty;
-    }
-}
+
 
 
 // ************************************************************************* //
